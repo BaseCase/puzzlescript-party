@@ -1,0 +1,40 @@
+*, *:before, *:after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  background-color: aliceblue;
+  flex: 1;
+  height: 100%;
+}
+
+main {
+  overflow: scroll;
+  flex: 3;
+}
+
+#games {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game {
+  width: 30%;
+}
+
+.game img {
+  width: 100%
+}
