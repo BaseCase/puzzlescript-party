@@ -4,20 +4,34 @@
 
     <title>8th Light PuzzleScript Jam!</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|VT323" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <div class="wrapper">
       <main>
-        <h1>PuzzleScript Jam Gallery</h1>
+        <h1>PuzzleScript Workshop Gallery</h1>
 
         <section id="games"></section>
       </main>
 
       <section id="sidebar">
-        <h2>Yeah, about that...</h2>
-        <p>Sidebar stuff, aw yeah.</p>
+        <div>
+          <h2>About This Page</h2>
+          <p>The games linked here are the result of <a href="https://www.meetup.com/8th-light-university/events/253219098/">a short game-making workshop held at 8th Light University</a> in Chicago on September 21, 2018. Participants saw a brief presentation introducing the PuzzleScript game engine and then had a few hours to make a quick game.</p>
+          <p>No one at the workshop had used PuzzleScript before, and many participants had never made a game!</p>
+        </div>
+
+        <div>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://8thlight.com/">8th Light (workshop hosts)</a></li>
+            <li><a href="https://www.puzzlescript.net/Documentation/rules101.html">PuzzleScript Documentation</a></li>
+            <li><a href="https://www.puzzlescript.net/editor.html">PuzzleScript Editor (make your own game!)</a></li>
+            <li><a href="https://puzzlescriptgallery.tumblr.com/">PuzzleScript Gallery (more games, not from this workshop)</a></li>
+          </ul>
+        </div>
       </section>
     </div>
 
@@ -95,12 +109,14 @@
         let container = document.querySelector('#games');
         projects.forEach(project => {
           let html = `
-            <a href="${project.url}">
-              <img src="${project.screenshot_url}">
+            <a href="${project.url}" rel="noopener noreferrer" target="_blank">
+              <div class="screenshot">
+                <img src="${project.screenshot_url}">
+              </div>
               <h2>${project.title}</h2>
             </a>
-            <h3>${project.authors}</h3>
-            <p>${project.description}</p>
+            <h3>by ${project.authors}</h3>
+            <p class="game-description">${project.description}</p>
           `
 
           let div = document.createElement('div')

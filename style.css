@@ -4,21 +4,59 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 body {
   background-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'VT323', monospace;
+  letter-spacing: .03em;
+}
+
+h1 {
+  font-size: 3em;
+  color: white;
+  background-color: rebeccapurple;
+  padding: 1rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin: .5em 0 0 0;
+}
+
+h3 {
+  font-size: 1em;
+  margin: .5em 0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #25aaff;
 }
 
 .wrapper {
   display: flex;
   height: 100vh;
+  min-width: 55rem;
 }
 
 #sidebar {
   background-color: aliceblue;
   flex: 1;
   height: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main {
@@ -29,12 +67,28 @@ main {
 #games {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 2rem;
 }
 
 .game {
-  width: 30%;
+  width: 26%;
+  margin-bottom: 2rem;
 }
 
 .game img {
-  width: 100%
+  width: 100%;
+}
+
+.screenshot {
+  overflow: hidden;
+}
+
+.game-description {
+  font-size: .9em;
+}
+
+li {
+  line-height: 2;
+  font-weight: bold;
 }
