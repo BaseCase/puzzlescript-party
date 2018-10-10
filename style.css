@@ -21,7 +21,7 @@ h1 {
   font-size: 3em;
   color: white;
   background-color: rebeccapurple;
-  padding: 1rem;
+  padding: 1rem 3rem;
   margin-top: 0;
 }
 
@@ -61,7 +61,7 @@ a, a:visited {
 
 main {
   overflow: scroll;
-  flex: 3;
+  flex: 4;
 }
 
 #games {
